@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Notes demo</title>
+		<style>
+			body {
+				font-family: system-ui, sans-serif;
+				margin: 1rem;
+				max-width: 36rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Notes demo</h1>
+		<p>Incubating catalog example — read-only note list via Vault SDK.</p>
+		<ul id="notes"></ul>
+		<script type="module">
+			const list = document.getElementById('notes');
+			list.innerHTML = '<li>Connect to Vault SDK in a full build.</li>';
+		</script>
+	</body>
+</html>

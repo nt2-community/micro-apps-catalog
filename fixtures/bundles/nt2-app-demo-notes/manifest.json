@@ -1,0 +1,22 @@
+{
+  "id": "nt2-app-demo-notes",
+  "version": "0.1.0",
+  "sdkVersion": "1.0.0",
+  "publisher": "did:key:z6MkcommunityCatalogDemoPublisher00000000001",
+  "permissions": [
+    "vault:status",
+    "items:list:note"
+  ],
+  "entry": {
+    "type": "iframe",
+    "path": "index.html",
+    "integrity": "sha384-He9v258oKBwsasCC6twGGsOSZ4B1ep0wM2FNJC4HyjONvuNyrHN1Ml0sQmEoDbut"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "label": "Notes demo"
+    }
+  ],
+  "minHostVersion": "0.0.1"
+}

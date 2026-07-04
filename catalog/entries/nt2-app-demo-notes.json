@@ -1,0 +1,30 @@
+{
+  "id": "nt2-app-demo-notes",
+  "name": "Notes demo (incubating)",
+  "description": "Minimal incubating example — read-only note list. Demonstrates community catalog PR workflow.",
+  "publisherKeyDid": "did:key:z6MkcommunityCatalogDemoPublisher00000000001",
+  "signPubJwk": {
+    "kty": "OKP",
+    "crv": "Ed25519",
+    "x": "A4wYeoUJjyXZWZim5__FxeEQSdq13EZtOQZ9yDM6Kxo"
+  },
+  "catalogSignature": "jsZP77TuE80HcYos9D6WNSsNShSPYRj9YoybiutdRP3Ih9yjHD9yVzkqR09aAW3HfoWw/d+w/ayvIJNzLoflAQ==",
+  "latestVersion": "0.1.0",
+  "permissions": [
+    "vault:status",
+    "items:list:note"
+  ],
+  "bundleIntegrity": "sha384-PgwbKHZXI+Mmv6BajDOuRdTMN+biqvCPBdG/6Bfl1oM9eKp1plhaaM3HXXQH65Km",
+  "bundleUrl": "https://github.com/nt2-community/micro-apps-catalog/releases/download/v0.1.0/nt2-app-demo-notes-0.1.0.nt2app",
+  "categories": [
+    "productivity",
+    "demo"
+  ],
+  "tags": [
+    "example",
+    "incubating"
+  ],
+  "maturity": "incubating",
+  "minSdkVersion": "1.0.0",
+  "repositoryUrl": "https://github.com/nt2-community/micro-apps-catalog"
+}

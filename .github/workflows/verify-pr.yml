@@ -1,0 +1,33 @@
+name: Verify catalog
+
+on:
+  pull_request:
+    paths:
+      - 'catalog/**'
+      - 'scripts/**'
+      - 'fixtures/**'
+      - 'package.json'
+  push:
+    branches: [main]
+    paths:
+      - 'catalog/**'
+      - 'scripts/**'
+      - 'fixtures/**'
+      - 'package.json'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Merge catalog
+        run: npm run catalog:merge
+      - name: Verify entries
+        run: npm run catalog:verify
+        env:
+          CATALOG_SKIP_INTEGRITY: ${{ github.event_name == 'pull_request' && '1' || '0' }}

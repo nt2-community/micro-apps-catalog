@@ -1,0 +1,8 @@
+{
+	"siteTitle": "NT² Micro-apps",
+	"tagline": "Browse Vault-compatible micro-apps from the open community catalog.",
+	"defaultLocale": "en",
+	"featuredAppIds": ["nt2-app-hello", "nt2-app-demo-notes"],
+	"vaultInstallBaseUrl": "https://se.nt2.me/settings/preferences",
+	"vaultMarketingUrl": "https://nt2.me"
+}

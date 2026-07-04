@@ -1,0 +1,65 @@
+[
+  {
+    "id": "nt2-app-demo-notes",
+    "name": "Notes demo (incubating)",
+    "description": "Minimal incubating example — read-only note list. Demonstrates community catalog PR workflow.",
+    "publisherKeyDid": "did:key:z6MkcommunityCatalogDemoPublisher00000000001",
+    "signPubJwk": {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "A4wYeoUJjyXZWZim5__FxeEQSdq13EZtOQZ9yDM6Kxo"
+    },
+    "catalogSignature": "jsZP77TuE80HcYos9D6WNSsNShSPYRj9YoybiutdRP3Ih9yjHD9yVzkqR09aAW3HfoWw/d+w/ayvIJNzLoflAQ==",
+    "latestVersion": "0.1.0",
+    "permissions": [
+      "vault:status",
+      "items:list:note"
+    ],
+    "bundleIntegrity": "sha384-PgwbKHZXI+Mmv6BajDOuRdTMN+biqvCPBdG/6Bfl1oM9eKp1plhaaM3HXXQH65Km",
+    "bundleUrl": "https://github.com/nt2-community/micro-apps-catalog/releases/download/v0.1.0/nt2-app-demo-notes-0.1.0.nt2app",
+    "categories": [
+      "productivity",
+      "demo"
+    ],
+    "tags": [
+      "example",
+      "incubating"
+    ],
+    "maturity": "incubating",
+    "minSdkVersion": "1.0.0",
+    "repositoryUrl": "https://github.com/nt2-community/micro-apps-catalog"
+  },
+  {
+    "id": "nt2-app-hello",
+    "name": "NT² Hello",
+    "description": "Official pilot micro-app — lists vault status and creates notes via the Vault SDK. Shipped with NT² for dev and staging.",
+    "publisherKeyDid": "did:key:z6MkcommunityCatalogDemoPublisher00000000001",
+    "signPubJwk": {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "A4wYeoUJjyXZWZim5__FxeEQSdq13EZtOQZ9yDM6Kxo"
+    },
+    "catalogSignature": "RjaMUtSMBGQ25qOEPtZFoCYYvI24zLS51rFUJzWjYFZ0JNpL+CMaTCBUnch/T8gPMBql34IGPOkoV5MM2JEzAA==",
+    "latestVersion": "0.0.1",
+    "permissions": [
+      "vault:status",
+      "items:list:note",
+      "items:create:note"
+    ],
+    "bundleIntegrity": "sha384-ROjMrgQETqGH3phxG0j5/FNQG5RH9W2UqZ9lkxKlyIXJWPtVx0T956IpPeHfKHj0",
+    "bundleUrl": "https://github.com/nt2-community/micro-apps-catalog/releases/download/v0.1.0/nt2-app-hello-0.0.1.nt2app",
+    "categories": [
+      "productivity",
+      "official"
+    ],
+    "tags": [
+      "pilot",
+      "notes",
+      "sdk"
+    ],
+    "maturity": "graduated",
+    "minSdkVersion": "1.0.0",
+    "homepageUrl": "https://github.com/nt2-community/micro-apps-catalog",
+    "repositoryUrl": "https://github.com/nt2-community/micro-apps-catalog"
+  }
+]

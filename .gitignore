@@ -1,0 +1,11 @@
+node_modules/
+.svelte-kit/
+build/
+dist/
+apps/site/build/
+apps/site/.svelte-kit/
+.DS_Store
+.env
+.env.*
+!.env.example
+release-assets/*.nt2app

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>NT² Hello Micro-app</title>
+		<style>
+			body {
+				font-family: system-ui, sans-serif;
+				margin: 1rem;
+				max-width: 40rem;
+			}
+			#status {
+				margin-bottom: 1rem;
+			}
+			#notes {
+				margin: 1rem 0;
+				padding-left: 1.25rem;
+			}
+			label {
+				display: block;
+				margin-top: 1rem;
+				font-size: 0.875rem;
+			}
+			input[type='text'] {
+				width: 100%;
+				margin-top: 0.25rem;
+				padding: 0.5rem;
+			}
+			button {
+				margin-top: 0.75rem;
+				padding: 0.5rem 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello micro-app</h1>
+		<p id="status">Connecting…</p>
+		<h2>Notes</h2>
+		<ul id="notes"></ul>
+		<label>
+			New note title
+			<input type="text" id="note-title" data-testid="nt2-hello-note-title" />
+		</label>
+		<button type="button" id="note-create" data-testid="nt2-hello-note-create">Create note</button>
+		<script>
+			const PROTOCOL_VERSION = 1;
+			const pending = new Map();
+
+			function sendRequest(type, extra = {}) {
+				const id = crypto.randomUUID();
+				window.parent.postMessage({ protocolVersion: PROTOCOL_VERSION, id, type, ...extra }, '*');
+				return new Promise((resolve, reject) => {
+					pending.set(id, { resolve, reject });
+					setTimeout(() => {
+						if (pending.has(id)) {
+							pending.delete(id);
+							reject(new Error('timeout'));
+						}
+					}, 10_000);
+				});
+			}
+
+			window.addEventListener('message', (event) => {
+				const data = event.data;
+				if (!data || typeof data !== 'object' || !data.id) return;
+				const waiter = pending.get(data.id);
+				if (!waiter) return;
+				pending.delete(data.id);
+				if (data.type === 'ERR') {
+					waiter.reject(new Error(data.message || data.code || 'error'));
+					return;
+				}
+				waiter.resolve(data);
+			});
+
+			async function refreshStatus() {
+				try {
+					const res = await sendRequest('GET_STATUS');
+					const name = res.payload && res.payload.displayName ? res.payload.displayName : 'Vault';
+					document.getElementById('status').textContent = 'Connected: ' + name;
+				} catch {
+					document.getElementById('status').textContent = 'Vault unavailable';
+				}
+			}
+
+			async function refreshNotes() {
+				const list = document.getElementById('notes');
+				list.replaceChildren();
+				try {
+					const res = await sendRequest('ITEMS_LIST', { category: 'note' });
+					const items = (res.payload && res.payload.rows) || [];
+					for (const item of items) {
+						const li = document.createElement('li');
+						li.textContent = item.title || item.id;
+						list.appendChild(li);
+					}
+				} catch {
+					const li = document.createElement('li');
+					li.textContent = 'Could not load notes';
+					list.appendChild(li);
+				}
+			}
+
+			document.getElementById('note-create').addEventListener('click', async () => {
+				const titleInput = document.getElementById('note-title');
+				const title = titleInput.value.trim();
+				if (!title) return;
+				try {
+					await sendRequest('ITEMS_CREATE', {
+						category: 'note',
+						payload: { title, body: 'Created by hello micro-app.' }
+					});
+					titleInput.value = '';
+					await refreshNotes();
+				} catch (error) {
+					const message = error instanceof Error ? error.message : 'Create note failed';
+					document.getElementById('status').textContent = message;
+				}
+			});
+
+			void (async () => {
+				await sendRequest('PING');
+				await refreshStatus();
+				await refreshNotes();
+			})();
+		</script>
+	</body>
+</html>
