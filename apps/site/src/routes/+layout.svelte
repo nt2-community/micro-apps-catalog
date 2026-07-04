@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import ThemeToggle from '$lib/ThemeToggle.svelte';
 	import type { LayoutData } from './$types';
 
 	const { data, children }: { data: LayoutData; children: import('svelte').Snippet } = $props();
@@ -9,6 +10,7 @@
 	<div class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4">
 		<a href="{base}/" class="text-lg font-semibold text-primary">{data.meta.siteTitle}</a>
 		<div class="flex-1"></div>
+		<ThemeToggle />
 		<a class="btn btn-ghost btn-sm" href="{base}/contribute">Contribute</a>
 		<a class="btn btn-outline btn-sm" href={data.meta.vaultMarketingUrl} rel="noopener noreferrer"
 			>Get Vault</a

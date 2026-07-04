@@ -13,7 +13,9 @@
 	<a class="link link-hover" href="{base}/">← Catalog</a>
 </nav>
 
-<article class="prose max-w-none">
+<article
+	class="max-w-none space-y-4 text-base-content [&_a]:link [&_code]:rounded [&_code]:bg-base-200 [&_code]:px-1 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:mt-6 [&_h2]:text-xl [&_h2]:font-semibold [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-6"
+>
 	<h1>Contribute a listing</h1>
 	<p>
 		The catalog is open source. Authors submit signed <code>catalog/entries/{'{appId}'}.json</code>
