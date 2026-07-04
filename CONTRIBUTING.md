@@ -2,6 +2,8 @@
 
 Thank you for listing a Vault-compatible micro-app. This repository is **open governance** for discovery; installs happen **inside the Vault** after user consent.
 
+Questions before you open a PR? Join [NT² Community on Discord](https://discord.com/channels/1510213303576563712/1510213304159834175).
+
 ## Before you open a PR
 
 1. Read the [NT² Micro-app Author Guide](https://github.com/nt2/nt2/blob/main/docs/MICRO_APP_AUTHOR_GUIDE.md) (bundle build, signing, permissions).

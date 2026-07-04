@@ -25,6 +25,10 @@
 <footer class="border-t border-base-300 bg-base-100 py-6 text-center text-sm text-base-content/60">
 	<p>
 		Open catalog for <a class="link" href={data.meta.vaultMarketingUrl}>NT² Vault</a> micro-apps ·
+		{#if data.meta.communityDiscordUrl}
+			<a class="link" href={data.meta.communityDiscordUrl} rel="noopener noreferrer">Discord</a>
+			·
+		{/if}
 		<a class="link" href="https://github.com/nt2-community/micro-apps-catalog">Source on GitHub</a>
 	</p>
 </footer>

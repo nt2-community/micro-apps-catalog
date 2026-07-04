@@ -44,6 +44,10 @@ npm run catalog:verify
 | `npm run catalog:verify` | Parse, signature, and optional bundle integrity |
 | `npm run build` | Catalog + static site |
 
+## Community chat
+
+Questions about listing or reviewing apps? Join [NT² Community on Discord](https://discord.com/channels/1510213303576563712/1510213304159834175).
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). Author contract: [NT² Micro-app Author Guide](https://github.com/nt2/nt2/blob/main/docs/MICRO_APP_AUTHOR_GUIDE.md) (private monorepo; essential §6 summarized in CONTRIBUTING).

@@ -7,6 +7,7 @@ export interface CatalogMeta {
 	featuredAppIds: string[];
 	vaultInstallBaseUrl: string;
 	vaultMarketingUrl: string;
+	communityDiscordUrl?: string;
 }
 
 export type Maturity = 'incubating' | 'graduated';

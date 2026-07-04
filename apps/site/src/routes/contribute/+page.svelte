@@ -33,6 +33,12 @@
 			>CONTRIBUTING.md</a
 		>
 	</p>
+	{#if data.meta.communityDiscordUrl}
+		<p>
+			Questions? Join
+			<a class="link" href={data.meta.communityDiscordUrl} rel="noopener noreferrer">NT² Community on Discord</a>.
+		</p>
+	{/if}
 	<h2>Trust</h2>
 	<p>
 		This website is for discovery only. NT² Vault re-verifies signatures and shows a permission
