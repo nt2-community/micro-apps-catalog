@@ -8,6 +8,15 @@
 
 <div class="navbar bg-base-100 shadow-sm">
 	<div class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4">
+		{#if data.meta.communityHomeUrl}
+			<a
+				class="btn btn-ghost btn-sm shrink-0 text-base-content/70"
+				href={data.meta.communityHomeUrl}
+				rel="noopener noreferrer"
+			>
+				← NT² Community
+			</a>
+		{/if}
 		<a href="{base}/" class="text-lg font-semibold text-primary">{data.meta.siteTitle}</a>
 		<div class="flex-1"></div>
 		<ThemeToggle />
@@ -24,6 +33,10 @@
 
 <footer class="border-t border-base-300 bg-base-100 py-6 text-center text-sm text-base-content/60">
 	<p>
+		{#if data.meta.communityHomeUrl}
+			<a class="link" href={data.meta.communityHomeUrl} rel="noopener noreferrer">NT² Community</a>
+			·
+		{/if}
 		Open catalog for <a class="link" href={data.meta.vaultMarketingUrl}>NT² Vault</a> micro-apps ·
 		{#if data.meta.communityDiscordUrl}
 			<a class="link" href={data.meta.communityDiscordUrl} rel="noopener noreferrer">Discord</a>

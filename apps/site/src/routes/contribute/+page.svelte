@@ -10,7 +10,13 @@
 </svelte:head>
 
 <nav class="mb-4 text-sm">
-	<a class="link link-hover" href="{base}/">← Catalog</a>
+	{#if data.meta.communityHomeUrl}
+		<a class="link link-hover" href={data.meta.communityHomeUrl} rel="noopener noreferrer"
+			>NT² Community</a
+		>
+		<span class="text-base-content/40" aria-hidden="true"> / </span>
+	{/if}
+	<a class="link link-hover" href="{base}/">Catalog</a>
 </nav>
 
 <article
