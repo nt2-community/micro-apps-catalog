@@ -1,14 +1,14 @@
 {
-  "releaseTag": "v0.1.0",
+  "releaseTag": "v0.1.1",
   "assets": [
     {
       "file": "nt2-app-hello-0.0.1.nt2app",
-      "bundleIntegrity": "sha384-ROjMrgQETqGH3phxG0j5/FNQG5RH9W2UqZ9lkxKlyIXJWPtVx0T956IpPeHfKHj0",
+      "bundleIntegrity": "sha384-SBDYZ0UYhjl1n0LaZGgqqMdWTa+hHFWc6sd9lJeAMsJ1MQhq14CorXl1+tvdYjUN",
       "appId": "nt2-app-hello"
     },
     {
       "file": "nt2-app-demo-notes-0.1.0.nt2app",
-      "bundleIntegrity": "sha384-PgwbKHZXI+Mmv6BajDOuRdTMN+biqvCPBdG/6Bfl1oM9eKp1plhaaM3HXXQH65Km",
+      "bundleIntegrity": "sha384-w1BrVuIoj/DwioRLM3JXJnXePi9+qC2xafy3zl/GlOjA6coabhfe/xNWRutACZ6E",
       "appId": "nt2-app-demo-notes"
     }
   ]

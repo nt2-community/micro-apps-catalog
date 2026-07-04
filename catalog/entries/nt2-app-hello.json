@@ -8,15 +8,15 @@
     "crv": "Ed25519",
     "x": "A4wYeoUJjyXZWZim5__FxeEQSdq13EZtOQZ9yDM6Kxo"
   },
-  "catalogSignature": "RjaMUtSMBGQ25qOEPtZFoCYYvI24zLS51rFUJzWjYFZ0JNpL+CMaTCBUnch/T8gPMBql34IGPOkoV5MM2JEzAA==",
+  "catalogSignature": "MiYvuCHVZbQMketolXwHC/siwo7RbXmNi4acd5Ub7a8p2h3DOgi8KzRBO8ssBnxw2EulV/LeaHBQYu2cn/LzAQ==",
   "latestVersion": "0.0.1",
   "permissions": [
     "vault:status",
     "items:list:note",
     "items:create:note"
   ],
-  "bundleIntegrity": "sha384-ROjMrgQETqGH3phxG0j5/FNQG5RH9W2UqZ9lkxKlyIXJWPtVx0T956IpPeHfKHj0",
-  "bundleUrl": "https://github.com/nt2-community/micro-apps-catalog/releases/download/v0.1.0/nt2-app-hello-0.0.1.nt2app",
+  "bundleIntegrity": "sha384-SBDYZ0UYhjl1n0LaZGgqqMdWTa+hHFWc6sd9lJeAMsJ1MQhq14CorXl1+tvdYjUN",
+  "bundleUrl": "https://github.com/nt2-community/micro-apps-catalog/releases/download/v0.1.1/nt2-app-hello-0.0.1.nt2app",
   "categories": [
     "productivity",
     "official"

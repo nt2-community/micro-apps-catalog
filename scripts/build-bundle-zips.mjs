@@ -61,7 +61,7 @@ writeFileSync(
 	join(OUT_DIR, 'manifest.json'),
 	`${JSON.stringify(
 		{
-			releaseTag: 'v0.1.0',
+			releaseTag: 'v0.1.1',
 			assets: [
 				{ file: hello.outName, bundleIntegrity: hello.integrity, appId: 'nt2-app-hello' },
 				{ file: demo.outName, bundleIntegrity: demo.integrity, appId: 'nt2-app-demo-notes' }
