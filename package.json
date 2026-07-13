@@ -3,24 +3,33 @@
 	"private": true,
 	"version": "0.1.0",
 	"type": "module",
-	"workspaces": [
-		"apps/site"
-	],
 	"scripts": {
 		"catalog:merge": "node scripts/merge-catalog.mjs",
 		"catalog:verify": "node scripts/verify-catalog.mjs",
 		"bundles:build": "node scripts/build-bundle-zips.mjs",
 		"seed:bootstrap": "node scripts/bootstrap-seed.mjs",
 		"build:catalog": "npm run catalog:merge && npm run catalog:verify",
-		"build:site": "npm run build:catalog && node scripts/copy-catalog-to-site.mjs && npm run build --workspace=@nt2-community/catalog-site",
+		"build:site": "npm run build:catalog && node scripts/copy-catalog-to-site.mjs && vite build",
 		"build": "npm run build:site",
-		"check": "npm run catalog:verify && npm run check --workspace=@nt2-community/catalog-site",
-		"dev": "npm run build:catalog && node scripts/copy-catalog-to-site.mjs && npm run dev --workspace=@nt2-community/catalog-site"
+		"dev": "npm run build:catalog && node scripts/copy-catalog-to-site.mjs && vite dev --port 5179",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "npm run catalog:verify && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
 		"@noble/curves": "^1.9.1",
 		"@noble/hashes": "^1.8.0",
-		"fflate": "^0.8.2"
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@tailwindcss/vite": "^4.3.0",
+		"daisyui": "^5.5.20",
+		"fflate": "^0.8.2",
+		"svelte": "^5.55.2",
+		"svelte-check": "^4.4.6",
+		"tailwindcss": "^4.3.0",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7"
 	},
 	"engines": {
 		"node": ">=24.16.0"
