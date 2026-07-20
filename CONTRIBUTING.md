@@ -2,7 +2,7 @@
 
 Thank you for listing a Vault-compatible micro-app. This repository is **open governance** for discovery; installs happen **inside the Vault** after user consent.
 
-Questions before you open a PR? Join [NT² Community on Discord](https://discord.gg/K3YmGgwvV).
+Questions before you open a PR? Join [NT² Community on Discord](https://discord.gg/MRRmbBe48).
 
 ## Before you open a PR
 

@@ -46,7 +46,7 @@ npm run catalog:verify
 
 ## Community chat
 
-Questions about listing or reviewing apps? Join [NT² Community on Discord](https://discord.gg/K3YmGgwvV).
+Questions about listing or reviewing apps? Join [NT² Community on Discord](https://discord.gg/MRRmbBe48).
 
 ## Contributing
 
